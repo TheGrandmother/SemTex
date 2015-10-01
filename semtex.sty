@@ -47,4 +47,23 @@
 		}
 }
 
+%Creates a sos transfer rule \AxiomNs{S}{s}{s'} = <S,s> -> s' 
+\newcommand{\AxiomNs}[3]{
+        \ensuremath{
+            \operatorname{
+            \Config{#1}{#2} \rightarrow {#3}
+            }
+        }
+}
+
+%Creates a sos transfer rule \AxiomSos{S}{s}{s'} = <S,s> => s' 
+\newcommand{\AxiomSos}[3]{
+        \ensuremath{
+            \operatorname{
+            \Config{#1}{#2} \Rightarrow {#3}
+            }
+        }
+}
+
+
 
