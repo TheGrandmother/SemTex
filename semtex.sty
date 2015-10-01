@@ -28,6 +28,16 @@
 		}
 }
 
+%Creates a sos transfer rule \TransSos{S}{s}{S1}{s'} = <S,s> -> <S1,s'> 
+\newcommand{\TransNs}[4]{
+		\ensuremath{
+			\operatorname{
+			\Config{#1}{#2} \rightarrow \Config{#3}{#4}
+			}
+		}
+}
+
+
 %Adds a protect ... end around a statement.
 \newcommand{\Protect}[1]{
 		\ensuremath{
