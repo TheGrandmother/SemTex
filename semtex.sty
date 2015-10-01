@@ -1,0 +1,47 @@
+\def\BPmessage{SemTex the pointle semantics package}
+
+
+%Test rule macro. 
+\newcommand{\Par}[1]{
+\ensuremath{
+	\operatorname{
+	[\mathrm{par_{sos}^{{#1}}}]
+	}
+}
+}
+
+%Creates a configuration on the form \Config{S}{s} = <S,s>
+\newcommand{\Config}[2]{
+\ensuremath{
+	\operatorname{
+	\langle{#1},\;{#2}\rangle
+	}
+}
+}
+
+%Creates a sos transfer rule \TransSos{S}{s}{S1}{s'} = <S,s> => <S1,s'> 
+\newcommand{\TransSos}[4]{
+		\ensuremath{
+			\operatorname{
+			\Config{#1}{#2} \Rightarrow \Config{#3}{#4}
+			}
+		}
+}
+
+%Adds a protect ... end around a statement.
+\newcommand{\Protect}[1]{
+		\ensuremath{
+			\operatorname{
+			\mathtt{protect} \; {#1} \; \mathtt{end}
+			}
+		}
+}
+
+%Adds a protected ... end around a statement. 
+\newcommand{\Protected}[1]{
+		\ensuremath{
+			\operatorname{
+			\mathtt{protected} \; {#1} \; \mathtt{end}
+			}
+		}
+}
