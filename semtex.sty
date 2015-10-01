@@ -1,6 +1,16 @@
 \def\BPmessage{SemTex the pointle semantics package}
 
 
+
+%%Shorthand for mathtt. Silly but it saves a lot of space.
+\newcommand{\mt}[1]{
+\ensuremath{
+    \operatorname{
+    \mathtt{{#1}}
+    }
+}
+}
+
 %Test rule macro. 
 \newcommand{\Par}[1]{
 \ensuremath{
