@@ -8,70 +8,36 @@
 
 
 %Adds a protect ... end around a statement.
-\newcommand{\wProtect}[1]{
-    \ensuremath{
-        \operatorname{
-        \mathtt{protect} \; {#1} \; \mathtt{end} \;
-        }
-    }
+\newcommand{\wProtect}[1]{%
+    \mathtt{protect} \; {#1} \; \mathtt{end} \;
 }
 
 %Adds a protected ... end around a statement. 
-\newcommand{\wProtected}[1]{
-    \ensuremath{
-        \operatorname{
-        \mathtt{protected} \; {#1} \; \mathtt{end} \;
-        }
-    }
+\newcommand{\wProtected}[1]{%
+    \mathtt{protected} \; {#1} \; \mathtt{end} \;
 }
 
-\newcommand{\wPar}[2]{
-    \ensuremath{ 
-        \operatorname{
-        {#1} \; \mathtt{par} \; {#2} \;
-        }
-    }
-} 
-
-
-\newcommand{\wIfElse}[3]{
-    \ensuremath{
-        \operatorname{
-        \mathtt{if} \; {#1} \; \mathtt{then} \; {#2} \; \mathtt{else} \; {#3} \; 
-        }
-    }
+\newcommand{\wPar}[2]{%
+  {#1} \; \mathtt{par} \; {#2} \;
 }
 
-\newcommand{\wIf}[2]{
-    \ensuremath{
-        \operatorname{
-        \mathtt{if} \; {#1} \; \mathtt{then} \; {#2} \; 
-        }
-    }
+\newcommand{\wIfElse}[3]{%
+    \mathtt{if} \; {#1} \; \mathtt{then} \; {#2} \; \mathtt{else} \; {#3} \; 
 }
 
-\newcommand{\wWhile}[2]{
-    \ensuremath{
-        \operatorname{
-        \mathtt{while} \; {#1} \; \mathtt{do} \; {#2} \; 
-        }
-    }
+\newcommand{\wIf}[2]{%
+    \mathtt{if} \; {#1} \; \mathtt{then} \; {#2} \; 
+}
+
+\newcommand{\wWhile}[2]{%
+	  \mathtt{while} \; {#1} \; \mathtt{do} \; {#2} \; 
 }
 
 \newcommand{\wProc}[2]{
-    \ensuremath{
-        \operatorname{
-        \mathtt{proc} \; {#1} \; \mathtt{is} \; {#2} \; 
-        }
-    }
+    \mathtt{proc} \; {#1} \; \mathtt{is} \; {#2} \; 
 }
-
-
+  
 %%Creates the asignment thing like so; \Assign{x}{a}{s}
-\newcommand{\wAssign}[3]{
-    \ensuremath{
-        \operatorname{
-        s[{#1} \mapsto \mathcal{A}\llbracket {#2} \rrbracket {#3}] 
-        }
-    }
+\newcommand{\wAssign}[3]{%
+    {#3}[{#1} \mapsto \mathcal{A}\llbracket {#2} \rrbracket {#3}] 
 }
