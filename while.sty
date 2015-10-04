@@ -37,7 +37,24 @@
     \mathtt{proc} \; {#1} \; \mathtt{is} \; {#2} \; 
 }
   
-%%Creates the asignment thing like so; \Assign{x}{a}{s}
+%%Creates the asignment thing like so; \Assign{x}{a}{s} = s[x |-> A[[a]]s]
 \newcommand{\wAssign}[3]{%
     {#3}[{#1} \mapsto \mathcal{A}\llbracket {#2} \rrbracket {#3}] 
 }
+
+%Simple shorthand for the semantic arithmetic functions. Saves a lot of space.
+\newcommand{\wA}[1]{%
+	\mathcal{A}\llbracket {#1} \rrbracket
+}
+
+%Sweet thing for rules first argument is the name and the second argument is the
+% case. Leave the second argument blank for rules with only one case :)
+\newcommand{\wRns}[2]{%
+	[\mathrm{{#1}_{ns}^{{#2}}}]
+}
+ 
+
+
+
+
+
