@@ -1,39 +1,62 @@
 \def\BPmessage{SemTex the pointle semantics package}
 
 %%Shorthand for mathtt. Silly but it saves a lot of space.
-\newcommand{\mt}[1]{%
-    \mathtt{{#1}}
+\DeclareRobustCommand{\mt}[1]{%
+    \mathtt{#1}
+}
+
+\DeclareRobustCommand{\mr}[1]{%
+		\mathrm{#1}
+}
+
+%wrapps double brackets around the argument
+\DeclareRobustCommand{\db}[1]{%
+	\llbracket {#1} \rrbracket
 }
 
 %Test rule macro. 
-\newcommand{\Par}[1]{%
+\DeclareRobustCommand{\Par}[1]{%
 	[\mathrm{par_{sos}^{{#1}}}]
 }
 
 %Creates a configuration on the form \Config{S}{s} = <S,s>
-\newcommand{\Config}[2]{%
+\DeclareRobustCommand{\Config}[2]{%
+	\langle{#1},\;{#2}\rangle
+}
+
+%Shorthand for Config
+\DeclareRobustCommand{\Cfg}[2]{%
 	\langle{#1},\;{#2}\rangle
 }
 
 %Creates a sos transfer rule \TransSos{S}{s}{S1}{s'} = <S,s> => <S1,s'> 
-\newcommand{\TransSos}[4]{%
+\DeclareRobustCommand{\TransSos}[4]{%
 	\Config{#1}{#2} \Rightarrow \Config{#3}{#4}
 }
 
 %Creates a sos transfer rule \TransSos{S}{s}{S1}{s'} = <S,s> -> <S1,s'> 
-\newcommand{\TransNs}[4]{%
+\DeclareRobustCommand{\TransNs}[4]{%
 	\Config{#1}{#2} \rightarrow \Config{#3}{#4}
 }
 
 %Creates a sos transfer rule \AxiomNs{S}{s}{s'} = <S,s> -> s' 
-\newcommand{\AxiomNs}[3]{%
+\DeclareRobustCommand{\AxiomNs}[3]{%
   \Config{#1}{#2} \rightarrow {#3}
 }
 
 %Creates a sos transfer rule \AxiomSos{S}{s}{s'} = <S,s> => s' 
-\newcommand{\AxiomSos}[3]{%
+\DeclareRobustCommand{\AxiomSos}[3]{%
   \Config{#1}{#2} \Rightarrow {#3}
 }
+
+
+\DeclareRobustCommand{\AmCfg}[3]{%
+	\langle  #1,\; #2,\; #3 \rangle
+}
+
+\DeclareRobustCommand{\AmTr}[6]{%
+	\langle  #1,\; #2,\; #3 \rangle \; \righttriangle \; \langle  #4,\; #5,\; #6
+	\rangle }
 
 
 
