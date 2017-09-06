@@ -11,10 +11,10 @@
 
 %wrapps double brackets around the argument
 \DeclareRobustCommand{\db}[1]{%
-	\llbracket {#1} \rrbracket
+	\llbracket \mathtt{{#1}} \rrbracket
 }
 
-%Test rule macro. 
+%Test rule macro.
 \DeclareRobustCommand{\Par}[1]{%
 	[\mathrm{par_{sos}^{{#1}}}]
 }
@@ -29,22 +29,22 @@
 	\langle{#1},\;{#2}\rangle
 }
 
-%Creates a sos transfer rule \TransSos{S}{s}{S1}{s'} = <S,s> => <S1,s'> 
+%Creates a sos transfer rule \TransSos{S}{s}{S1}{s'} = <S,s> => <S1,s'>
 \DeclareRobustCommand{\TransSos}[4]{%
 	\Config{#1}{#2} \Rightarrow \Config{#3}{#4}
 }
 
-%Creates a sos transfer rule \TransSos{S}{s}{S1}{s'} = <S,s> -> <S1,s'> 
+%Creates a sos transfer rule \TransSos{S}{s}{S1}{s'} = <S,s> -> <S1,s'>
 \DeclareRobustCommand{\TransNs}[4]{%
 	\Config{#1}{#2} \rightarrow \Config{#3}{#4}
 }
 
-%Creates a sos transfer rule \AxiomNs{S}{s}{s'} = <S,s> -> s' 
+%Creates a sos transfer rule \AxiomNs{S}{s}{s'} = <S,s> -> s'
 \DeclareRobustCommand{\AxiomNs}[3]{%
   \Config{#1}{#2} \rightarrow {#3}
 }
 
-%Creates a sos transfer rule \AxiomSos{S}{s}{s'} = <S,s> => s' 
+%Creates a sos transfer rule \AxiomSos{S}{s}{s'} = <S,s> => s'
 \DeclareRobustCommand{\AxiomSos}[3]{%
   \Config{#1}{#2} \Rightarrow {#3}
 }
@@ -60,3 +60,18 @@
 
 
 
+\DeclareRobustCommand{\CurlyB}[0]{%
+        \mathcal{B}
+}
+
+\DeclareRobustCommand{\CurlyA}[0]{%
+        \mathcal{A}
+}
+
+\DeclareRobustCommand{\LiteralTrue}[0]{%
+  \mathbf{tt}
+}
+
+\DeclareRobustCommand{\LiteralFalse}[0]{%
+  \mathbf{ff}
+}
